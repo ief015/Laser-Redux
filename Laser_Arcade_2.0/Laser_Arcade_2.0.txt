@@ -1,0 +1,12 @@
+"Laser_Arcade_2.0"
+{
+	"base"		"base"
+	"title"		"Laser Arcade 2.0"
+	"maps"		"^la_"
+	"menusystem"	"1"
+
+	"settings"
+	{
+		// TODO: put some settings here
+	}
+}

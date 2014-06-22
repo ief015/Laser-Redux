@@ -1,0 +1,18 @@
+"Gamemode"
+{
+	"name"		"Laser Arcade 2.0"
+	"version"	"2.0"
+	
+	"author_name"	"Gmod4Ever, rcdraco, TheGreen16"
+	"author_email"	"rcdraco@gmail.com"
+	"author_url"	"http://rcdraco.freeforums.org"
+
+	"info"		"Fight off the alien hordes for as long as you can."
+	"hide"		"0"
+
+	"mappattern" // This sets all maps with la_ before the name to default the map gamemode to "Laser Arcade"
+	{
+		"1"	"^la_"
+	}
+
+}

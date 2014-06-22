@@ -1,0 +1,33 @@
+The following code should be placed into the function "GM:PlayerDeath(user,wep,atk)" in this lua file:
+laser\gamemode\init.lua
+
+
+
+
+
+for k,v in pairs( ents.FindByClass( "trans_beacon" ) ) do
+	if v:GetOwner() == user then v:Remove() end
+end
+
+
+
+
+And you can replace  function "GM:PlayerSpawn(user)" with this in the same lua file:
+
+
+
+
+local AllowTrans = true //Give player Translocator when spawned
+function GM:PlayerSpawn(user)
+	if user:Team() > 2 then
+		if team.NumPlayers(1) > team.NumPlayers(2) then
+			user:SetTeam(2)
+		else
+			user:SetTeam(1)
+		end
+		user.KillingSpree = 0
+		user.Trail = util.SpriteTrail(user, 0, team.GetColor(user:Team()), false, 16, 2, 3, 1 / ((16 + 2) * 0.5), "trails/laser.vmt")
+	end
+	timer.Simple(0.1,function(user) user:Give("weapon_laser") if AllowTrans == true then user:Give("weapon_translocator") end if user:Team() == 1 then user:SetModel(RedPlayerModels[math.random(1,#RedPlayerModels)]) else user:SetModel(BluePlayerModels[math.random(1,#BluePlayerModels)]) end end,user)
+	user:ShouldDropWeapon(false)
+end
