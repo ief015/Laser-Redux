@@ -1,71 +1,67 @@
-GM.Name 	= "Laser Arcade 2.0"
-GM.Author 	= "Gmod4Ever, rcdraco, and TheGreen16"
-GM.Email 	= "rcdraco@gmail.com"
-GM.Website 	= "rcdraco.freeforums.org"
-GM.TeamBased    = True
+GM.Name 		= "Laser Arcade 2.0"
+GM.Author 		= "Gmod4Ever, rcdraco, ief015,TheGreen16"
+GM.Email 		= "rcdraco@gmail.com, ief015@gmail.com"
+GM.Website		= "rcdraco.freeforums.org"
+GM.TeamBased	= True
 
-//server to client downloads
-//space skybox
-resource.AddFile("materials/skybox/spaceup.vtf")
-resource.AddFile("materials/skybox/spacert.vtf")
-resource.AddFile("materials/skybox/spacelf.vtf")
-resource.AddFile("materials/skybox/spaceft.vtf")
-resource.AddFile("materials/skybox/spacedn.vtf")
-resource.AddFile("materials/skybox/spacebk.vtf")
-//vmt's necessary?
-resource.AddFile("materials/skybox/spaceup.vmt")
-resource.AddFile("materials/skybox/spacert.vmt")
-resource.AddFile("materials/skybox/spacelf.vmt")
-resource.AddFile("materials/skybox/spaceft.vmt")
-resource.AddFile("materials/skybox/spacedn.vmt")
-resource.AddFile("materials/skybox/spacebk.vmt")
+laser = {};
 
-//[Just to clarify, I've removed this because I guess it doesn't help enough.]
-//
-//function faimbot_on( player, command, arguments )
-//	LocalPlayer():ConCommand("say", "LAWL I USED AIMBOT!")
-//	LocalPlayer():ConCommand("aimbot_off")
-//	LocalPlayer():ConCommand("kill")
-//end
-//
-//concommand.Add( "aimbot_on", faimbot_on )
-//
-//function fsmartlock( player, command, arguments )
-//	LocalPlayer():ConCommand("say", "LAWL I USED SMARTSNAP!")
-//	LocalPlayer():ConCommand("kill")
-//end
-//
-//concommand.Add( "smartlock", fsmartlock )
-//
+laser.TeamGoal          = 50; -- How many total frags must a team get for the next level?
+laser.IntermissionTime  = 15; -- How many seconds to show board before going to next map
+laser.EvenizerIntervals = 60;
+laser.EvenizeDelay      = 5;
 
-function GM:CreateTeams()//Loosely based on code from luabin.foszor, some sort of gmod code junk where this was finally explained
-	TEAM_RED = 1
-        team.SetUp( TEAM_RED, "Red", Color( 255, 0, 0 ) )
-	TEAM_BLUE = 2
-      	team.SetUp( TEAM_BLUE, "Blue", Color( 0, 172, 255 ) )
+laser.NextEvenize = CurTime() + laser.EvenizerIntervals;
 
-	if #ents.FindByClass("info_player_combine") > 0 then //This will check how many things are in the table of entities that it finds, and will run if there are any
-		team.SetSpawnPoint( 1, "info_player_combine" )
-        	team.SetSpawnPoint( 2, "info_player_rebel" )
-	else
-		team.SetSpawnPoint( 1, "info_player_start" )
-        	team.SetSpawnPoint( 2, "info_player_start" )
-	end
+laser.MIN_DEATH_TIME = 5;
+
+laser.TEAM_RED  = 1;
+laser.TEAM_BLUE = 2;
+
+laser.TEAM_RED_COLOR = Color(255, 0, 0);
+laser.TEAM_BLUE_COLOR = Color(100, 100, 255);
+
+function GM:CreateTeams()
+	
+	team.SetUp(laser.TEAM_RED, "Red", laser.TEAM_RED_COLOR);
+	team.SetUp(laser.TEAM_BLUE, "Blue", laser.TEAM_BLUE_COLOR);
+	
+	team.SetSpawnPoint(laser.TEAM_RED, { 'info_player_start', 'info_player_deathmatch', 'info_player_combine', "info_player_terrorist", 'info_player_axis' });
+	team.SetSpawnPoint(laser.TEAM_BLUE, { 'info_player_start', 'info_player_deathmatch', 'info_player_rebel', 'info_player_counterterrorist', 'info_player_allies' });
+	
 end
 
-hook.Add("ShouldCollide", "IgnoreTeammates", function(a, b)
+-- Get all fraggers on a given team, sorted from most frags ([1]) to least ([#last]).
+function laser.GetSortedFraggers(teamid)
 	
-	if a:IsPlayer() and b:IsPlayer() then
-		
-		return a:Team() ~= b:Team()
-		
+	local all = team.GetPlayers(teamid);
+	table.sort(all, function(a,b) return a:Frags() > b:Frags() end);
+	
+	return all;
+	
+end
+
+-- Returns the sum of all the frags on a given team.
+function laser.GetTeamFrags(teamid)
+
+	local curFrags = 0;
+	
+	for k,v in pairs(team.GetPlayers(teamid)) do
+		curFrags = curFrags + v:Frags();
 	end
 	
-end)
+	return curFrags;
+	
+end
 
-TeamGoal = 50 -- How many total frags must a team get for the next level?
-IntermissionTime = 15 -- How many seconds to show board before going to next map
-EvenizerIntervals = 60
-EvenizeDelay = 5
-
-NextEvenize = CurTime() + EvenizerIntervals
+-- Returns a random number shared between the server and client.
+--[[
+local iseed = 0;
+local seed = GetGlobalString('laser_randomSeed');
+function laser.getSharedRandom(min, max)
+	
+	iseed = iseed + 1;
+	return util.SharedRandom(seed, min or 0, max or 1, iseed);
+	
+	
+end]]
