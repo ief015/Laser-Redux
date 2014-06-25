@@ -134,9 +134,7 @@ function FireLaser(attacker, inflictor, filter, pos, dir, force, range)
 					dmg:SetDamageType(DMG_ENERGYBEAM);
 					
 					--hitEnt:TakeDamage(laser.LASER_DAMAGE, attacker, inflictor);
-					MsgN("before takedmg");
 					hitEnt:TakeDamageInfo(dmg);
-					MsgN("after takedmg");
 				--end
 				
 				if force then
@@ -275,6 +273,10 @@ function GM:PlayerSpawn(user)
 	end
 	
 	user:Give("weapon_laser");
+	--user:Give("weapon_lasergun");
+	--user:Give("weapon_fastlaser");
+	--user:Give("weapon_shotgunlaser");
+	--user:Give("weapon_sniperlaser");
 	user:ShouldDropWeapon(false);
 	user:SetNoCollideWithTeammates(true);
 	user:SetWalkSpeed(450);

@@ -195,18 +195,31 @@ SWEP.AutoSwitchFrom        = false;
 SWEP.Primary.Automatic     = false;
 
 SWEP.Primary.Anim          = ACT_VM_PRIMARYATTACK;
-SWEP.Primary.Cone          = 0.;
+SWEP.Primary.Cone          = 0;
 SWEP.Primary.Delay         = 1.5;
 SWEP.Primary.Kickback      = 1200;
 SWEP.Primary.NumShots      = 1;
 SWEP.Primary.Recoil        = 0;
 SWEP.Primary.Sound         = Sound("weapons/gauss/fire1.wav");
 SWEP.Primary.UseCooldown   = true;
+SWEP.Primary.Offset        = Vector(0, 0, 6);
 
 
 function SWEP:ExtraSetupDataTables()
 	
 	self:NetworkVar('Int', 1, 'ZoomLevel');
+	
+end
+
+function SWEP:PreAttack(isPrimary)
+	
+	if isPrimary then
+		if self:GetZoomLevel() > 0 then
+			self.Primary.Offset = Vector(0, 0, 0);
+		else
+			self.Primary.Offset = Vector(0, 0, 6);
+		end
+	end
 	
 end
 

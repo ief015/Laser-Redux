@@ -1,3 +1,4 @@
+--[[
 local shotnumber=0;
 
 if SERVER then
@@ -148,6 +149,121 @@ function SWEP:DrawHUD()
 		end
 	end
 end
-		
+]]
+
+if SERVER then
+	AddCSLuaFile();
+	SWEP.HoldType = "ar2";
+end
+
+if CLIENT then
+	SWEP.DrawAmmo = true;
+	SWEP.DrawCrosshair = false;
+	SWEP.PrintName = "Mini-Beamer";
+	SWEP.Author	= "ief015";
+	SWEP.Slot = 4;
+	SWEP.SlotPos = 0;
+	SWEP.IconLetter = "c";
+	SWEP.ViewModelFlip = false;
+	killicon.AddFont("Mini-Beamer", "CSKillIcons", SWEP.IconLetter, Color(255, 80, 0, 255));
+end
+
+SWEP.Base                  = "weapon_laserbase";
+
+SWEP.Spawnable             = true;
+SWEP.AdminSpawnable        = true;
+
+SWEP.ViewModel             = "models/weapons/v_mach_m249para.mdl";
+SWEP.WorldModel            = "models/weapons/w_mach_m249para.mdl";
+
+SWEP.Weight                = 5;
+SWEP.AutoSwitchTo          = false;
+SWEP.AutoSwitchFrom        = false;
+
+SWEP.Primary.Ammo          = "Pistol";
+SWEP.Primary.Automatic     = true;
+SWEP.Primary.ClipSize      = 55;
+SWEP.Primary.DefaultClip   = 55;
+SWEP.Primary.Reload        = 6.5;
+
+SWEP.incrementCOF       = 0.032;
+SWEP.decrementCOFPerSec = 0.3;
+SWEP.restingCOF         = 0.02;
+SWEP.maxCOF             = 0.2;
+
+SWEP.lastChangeCOF      = 0;
+
+SWEP.Primary.Anim          = ACT_VM_PRIMARYATTACK;
+SWEP.Primary.Cone          = SWEP.restingCOF;
+SWEP.Primary.Delay         = 0.08;
+SWEP.Primary.Kickback      = 100;
+SWEP.Primary.NumShots      = 1;
+SWEP.Primary.Recoil        = 0;
+SWEP.Primary.Sound         = Sound("Weapon_M249.Single");
+SWEP.Primary.UseCooldown   = false;
+
+
+function SWEP:OnThink()
 	
+	local t = CurTime();
+	
+	self.Primary.Cone = math.Clamp(self.Primary.Cone - ((t - self.lastChangeCOF) * self.decrementCOFPerSec), self.restingCOF, self.maxCOF);
+	
+	--if SERVER then PrintMessage(HUD_PRINTTALK, "Cone: " .. self.Primary.Cone); end
+	
+	self.lastChangeCOF = t;
+	
+end
+
+function SWEP:PostAttack(isPrimary)
+	
+	if isPrimary then
 		
+		self.Primary.Cone = math.Clamp(self.Primary.Cone + self.incrementCOF, self.restingCOF, self.maxCOF);
+		self.lastChangeCOF = CurTime();
+		
+	end
+	
+end
+
+function SWEP:CanPrimaryAttack()
+	
+	if self:IsReadyToFire() then
+		
+		if self.Weapon:Clip1() <= 0 then
+		
+			self:EmitSound("Weapon_Pistol.Empty");
+			self:Reload();
+			
+			return false;
+		end
+		
+		self:TakePrimaryAmmo(1);
+		
+		return true;
+	end
+	
+	return false;
+	
+end
+
+function SWEP:Reload()
+	
+	if not self:IsReadyToFire() then return end
+	if self.Weapon:Clip1() >= self.Primary.ClipSize then return end
+	
+	self.Weapon:DefaultReload(ACT_VM_RELOAD);
+	self.Weapon:SendWeaponAnim(ACT_VM_RELOAD);
+	self:StartCooldown(self.Primary.Reload);
+	
+end
+
+function SWEP:FinishedCooldown()
+	
+	self:SetClip1(self.Primary.ClipSize);
+	
+end
+
+function SWEP:SecondaryAttack()
+	-- No secondary.
+end

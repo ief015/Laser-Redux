@@ -205,7 +205,7 @@ SWEP.Primary.Automatic     = true;
 SWEP.Secondary.Automatic   = true;
 
 SWEP.Primary.Anim          = ACT_VM_PRIMARYATTACK;
-SWEP.Primary.Cone          = 0.05;
+SWEP.Primary.Cone          = 0.035;
 SWEP.Primary.Delay         = 0.15;
 SWEP.Primary.Kickback      = 200;
 SWEP.Primary.NumShots      = 2;

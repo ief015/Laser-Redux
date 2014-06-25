@@ -191,7 +191,7 @@ SWEP.Secondary.Automatic   = false;
 
 SWEP.Primary.Anim          = ACT_SHOTGUN_PUMP;
 SWEP.Primary.Cone          = 0.15;
-SWEP.Primary.Delay         = 1.8;
+SWEP.Primary.Delay         = 1;
 SWEP.Primary.Kickback      = 1000;
 SWEP.Primary.NumShots      = 16;
 SWEP.Primary.Recoil        = 1;
@@ -200,9 +200,9 @@ SWEP.Primary.UseCooldown   = true;
 
 SWEP.Secondary.Anim        = ACT_SHOTGUN_PUMP;
 SWEP.Secondary.Cone        = 0.05;
-SWEP.Secondary.Delay       = 2.5;
+SWEP.Secondary.Delay       = 2;
 SWEP.Secondary.Kickback    = 500;
 SWEP.Secondary.NumShots    = 12;
-SWEP.Primary.Recoil        = 1;
+SWEP.Secondary.Recoil      = 1.5;
 SWEP.Secondary.Sound       = Sound("weapons/flaregun/fire.wav");
 SWEP.Secondary.UseCooldown = true;

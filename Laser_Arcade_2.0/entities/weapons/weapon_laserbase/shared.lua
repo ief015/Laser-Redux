@@ -47,6 +47,7 @@ SWEP.Primary.NumShots      = 1;
 SWEP.Primary.Recoil        = 0;
 SWEP.Primary.Sound         = Sound("npc/sniper/sniper1.wav");
 SWEP.Primary.UseCooldown   = false;
+SWEP.Primary.Offset        = Vector(0, 0, 6);
 
 SWEP.Secondary.Anim        = ACT_VM_SECONDARYATTACK;
 SWEP.Secondary.Cone        = 0.04;
@@ -56,23 +57,17 @@ SWEP.Secondary.NumShots    = 6;
 SWEP.Secondary.Recoil      = 2;
 SWEP.Secondary.Sound       = Sound("weapons/flaregun/fire.wav");
 SWEP.Secondary.UseCooldown = true;
+SWEP.Secondary.Offset      = Vector(0, 0, 6);
 
---[[
-SWEP.NextFire              = 0;
-SWEP.Cooldown              = {
-	IsCooling              = false,
-	StartTime              = 0,
-	EndTime                = 0,
-};]]
 
-function SWEP:ShootLaser(xcone, ycone, kickback)
+function SWEP:ShootLaser(xcone, ycone, kickback, offset)
 	
 	if SERVER then
 		
 		ycone = (ycone == nil) and xcone or ycone;
 		
 		FireLaser(self.Owner, self.Weapon, { self.Owner },
-		          self.Owner:GetShootPos() - Vector(0, 0, 6),
+		          self.Owner:GetShootPos() - (offset or Vector(0, 0, 0)),
 		          (self.Owner:GetAimVector() + Vector(math.Rand(-xcone, xcone), math.Rand(-xcone, xcone), math.Rand(-ycone, ycone))),
 		          kickback);
 		
@@ -118,100 +113,11 @@ function SWEP:DrawCooldownBar()
 	
 end
 
-
---[[
-
-function SWEP:GetNextFire()
+function SWEP:IsReadyToFire()
 	
-	return self.Weapon:GetNWFloat('NextFire');
+	return (CurTime() > self:GetNextFire() and not self:GetCoolingDown());
 	
 end
-
-function SWEP:IsCoolingDown()
-	
-	return self.Weapon:GetNWBool('IsCoolingDown');
-	
-end
-
-function SWEP:GetCoolingStartTime()
-	
-	return self.Weapon:GetNWFloat('CoolingStart');
-	
-end
-
-function SWEP:GetCoolingEndTime()
-	
-	return self.Weapon:GetNWFloat('CoolingEnd');
-	
-end
-
-function SWEP:GetCooldownProgress()
-	
-	if not self:IsCoolingDown() then
-		return 0;
-	end
-	
-	local start = self:GetCoolingStartTime();
-	
-	return math.min((CurTime() - start) / (self:GetCoolingEndTime() - start), 1);
-	
-end
-
-if SERVER then
-	
-	function SWEP:StartCooldown(duration)
-		
-		local st  = CurTime();
-		local et = st + duration;
-		
-		self:SetCoolingDown(true);
-		self:SetCoolingStartTime(st);
-		self:SetCoolingEndTime(et);
-		
-		return et;
-		
-	end
-	
-	function SWEP:SetNextFire(nextFire)
-		
-		self.Weapon:SetNWFloat('NextFire', nextFire);
-		
-	end
-	
-	function SWEP:SetCoolingDown(coolingDown)
-		
-		self.Weapon:SetNWBool('IsCoolingDown', coolingDown);
-		
-	end
-	
-	function SWEP:SetCoolingStartTime(startTime)
-		
-		self.Weapon:SetNWFloat('CoolingStart', startTime);
-		
-	end
-	
-	function SWEP:SetCoolingEndTime(endTime)
-		
-		self.Weapon:SetNWBool('CoolingEnd', endTime);
-		
-	end
-	
-end
-
-function SWEP:Initialize()
-	
-	if SERVER then
-		
-		self:SetNextFire(0);
-		self:SetCoolingDown(false);
-		self:SetCoolingStartTime(0);
-		self:SetCoolingEndTime(0);
-		
-	end
-	
-end
-
-]]
 
 function SWEP:SetupDataTables()
 	
@@ -220,9 +126,27 @@ function SWEP:SetupDataTables()
 	self:NetworkVar('Float', 1, 'CoolingStartTime');
 	self:NetworkVar('Float', 2, 'CoolingEndTime');
 	
-	if self.ExtraSetupDataTables then
-		self:ExtraSetupDataTables();
-	end
+	self:ExtraSetupDataTables();
+	
+end
+
+function SWEP:ExtraSetupDataTables()
+	-- Slots 0->2 are reserved for baselaser! It is recommended you use a higher slot.
+end
+
+function SWEP:FinishedCooldown()
+	
+end
+
+function SWEP:PreAttack(isPrimary)
+	
+end
+
+function SWEP:PostAttack(isPrimary)
+	
+end
+
+function SWEP:OnThink()
 	
 end
 
@@ -232,22 +156,24 @@ function SWEP:PrimaryAttack()
 	if not self:CanPrimaryAttack() then return end
 	self.Owner:LagCompensation(true);
 	
+	self:PreAttack(true);
+	
 	-- Fire animation and sounds.
 	self.Weapon:SendWeaponAnim(self.Primary.Anim);
 	self.Weapon:EmitSound(self.Primary.Sound, 120, 60);
+	self.Owner:ViewPunch(Angle(-self.Primary.Recoil, 0, 0));
 	
 	if SERVER then
 		
 		-- Shoot the lasers.
 		for i = 1, self.Primary.NumShots do
-			self:ShootLaser(self.Primary.Cone, self.Primary.Cone, self.Primary.Kickback);
+			self:ShootLaser(self.Primary.Cone, self.Primary.Cone, self.Primary.Kickback, self.Primary.Offset);
 		end
 		
 		-- Send our playing flying back.
 		self.Owner:SetVelocity((self.Owner:GetAimVector() * -1) * self.Primary.Kickback);
+		
 	end
-	
-	self.Owner:ViewPunch(Angle(-self.Primary.Recoil, 0, 0));
 	
 	-- Set when allowed to fire next.
 	if self.Primary.UseCooldown then
@@ -255,6 +181,8 @@ function SWEP:PrimaryAttack()
 	else
 		self:SetNextFire(CurTime() + self.Primary.Delay);
 	end
+	
+	self:PostAttack(true);
 	
 	self.Owner:LagCompensation(false);
 	
@@ -266,23 +194,24 @@ function SWEP:SecondaryAttack()
 	if not self:CanSecondaryAttack() then return end
 	self.Owner:LagCompensation(true);
 	
+	self:PreAttack(false);
+	
 	-- Fire animation and sounds.
 	self.Weapon:SendWeaponAnim(self.Secondary.Anim);
 	self.Weapon:EmitSound(self.Secondary.Sound, 120, 60);
-	
+	self.Owner:ViewPunch(Angle(-self.Secondary.Recoil, 0, 0));
 	
 	if SERVER then
 		
 		-- Shoot the lasers.
 		for i = 1, self.Secondary.NumShots do
-			self:ShootLaser(self.Secondary.Cone, self.Secondary.Cone, self.Secondary.Kickback);
+			self:ShootLaser(self.Secondary.Cone, self.Secondary.Cone, self.Secondary.Kickback, self.Secondary.Offset);
 		end
 		
 		-- Send our playing flying back.
 		self.Owner:SetVelocity((self.Owner:GetAimVector() * -1) * self.Secondary.Kickback);
+		
 	end
-	
-	self.Owner:ViewPunch(Angle(-self.Secondary.Recoil, 0, 0));
 	
 	-- Set when allowed to fire next.
 	if self.Secondary.UseCooldown then
@@ -290,6 +219,8 @@ function SWEP:SecondaryAttack()
 	else
 		self:SetNextFire(CurTime() + self.Secondary.Delay);
 	end
+	
+	self:PostAttack(false);
 	
 	self.Owner:LagCompensation(false);
 	
@@ -302,21 +233,24 @@ function SWEP:Think()
 		if CurTime() >= self:GetCoolingEndTime() then
 			
 			self:SetCoolingDown(false);
+			self:FinishedCooldown()
 			
 		end
 	end
+	
+	self:OnThink();
 	
 end
 
 function SWEP:CanPrimaryAttack()
 	
-	return (CurTime() > self:GetNextFire() and not self:GetCoolingDown());
+	return self:IsReadyToFire();
 	
 end
 
 function SWEP:CanSecondaryAttack()
 	
-	return self:CanPrimaryAttack();
+	return self:IsReadyToFire();
 	
 end
 
