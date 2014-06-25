@@ -4,6 +4,8 @@ include 'shared.lua'
 
 GM.Name = "Laser Arcade 2.0"
 
+util.AddNetworkString('laser_LaserEffect');
+
 local PlayerKillMessages = {">v got pulverized by >a!!", -- >v == victim, >a == attacker
 ">a owned >v!!",
 ">v got obliterated by >a!!",
@@ -22,8 +24,6 @@ KillingSprees[14] = "HOLY MELONS!!!!!!"
 
 local RedPlayerModels = { "models/player/combine_super_soldier.mdl", "models/player/combine_soldier.mdl" }
 local BluePlayerModels = { "models/player/monk.mdl", "models/player/breen.mdl" }
-
-SetGlobalString('laser_randomSeed', tostring(os.time()));
 
 -- Is this even necessary?
 --[[
@@ -46,6 +46,110 @@ function GM:PlayerSelectSpawn( ply )
 	end
 end
 ]]
+
+--[[
+local function SpawnBot()
+	
+	local bot = player.CreateNextBot("BOT " .. table.Random({
+		"Bill",
+		"Bob",
+		"Joe",
+		"Jack",
+		"Andy",
+		"Phil",
+		"Mike",
+		"Amanda",
+		"Mindy",
+		"Mary",
+	}));
+	
+	if IsValid(bot) then
+		
+		--bot:SetTeam(team.BestAutoJoinTeam());
+		
+	else
+		MsgN("Error creating bot! Is there enough player slots?");
+	end
+	
+end
+concommand.Add('laser_bot', SpawnBot);
+]]
+
+-- FireLaser(Entity attacker, Entity inflictor, Entity|Table filter, Vector pos, Vector dir, number force, number range = 0)
+-- Fire a laser and inflict some damage.
+function FireLaser(attacker, inflictor, filter, pos, dir, force, range)
+	
+	if IsValid(attacker) then
+		
+		local tr = util.TraceLine({
+			start  = pos,
+			endpos = pos + (dir * ((range == nil or range == 0) and (4096*8) or range)),
+			filter = filter,
+		});
+		
+		-- We do two because they're only drawn if the player is looking at the starting point of the beam.
+		-- We want the lasers to draw more often than that. Drawing twice with the start/origin swapped
+		-- should help in most cases.
+		local effect = EffectData();
+		effect:SetStart(tr.StartPos);
+		effect:SetOrigin(tr.HitPos);
+		effect:SetEntity(attacker);
+		util.Effect("laser", effect);
+		
+		effect = EffectData();
+		effect:SetStart(tr.HitPos);
+		effect:SetOrigin(tr.StartPos);
+		effect:SetEntity(attacker);
+		util.Effect("laser", effect);
+		
+		-- Unfortunate hack, for now.
+		if attacker:IsPlayer() then
+			
+			if not game.SinglePlayer() then
+				
+				net.Start('laser_laserEffect');
+					net.WriteEntity(attacker);
+					net.WriteVector(tr.StartPos);
+					net.WriteVector(tr.HitPos);
+				net.Send(attacker);
+				
+			end
+			
+		end
+		
+		if tr.HitNonWorld then
+			
+			local hitEnt = tr.Entity;
+			
+			if IsValid(hitEnt) then
+				
+				--if (not hitEnt:IsPlayer()) or (hitEnt:IsPlayer() and hitEnt:Team() ~= attacker:Team()) then
+					
+					local dmg = DamageInfo();
+					dmg:SetAttacker(attacker);
+					dmg:SetInflictor(inflictor);
+					dmg:SetDamage(laser.LASER_DAMAGE);
+					dmg:SetDamageForce(tr.Normal * (force or 1));
+					dmg:SetDamagePosition(tr.HitPos);
+					dmg:SetDamageType(DMG_ENERGYBEAM);
+					
+					--hitEnt:TakeDamage(laser.LASER_DAMAGE, attacker, inflictor);
+					MsgN("before takedmg");
+					hitEnt:TakeDamageInfo(dmg);
+					MsgN("after takedmg");
+				--end
+				
+				if force then
+					hitEnt:SetVelocity(tr.Normal * force);
+				end
+				
+			end
+			
+		end
+		
+	end
+	
+end
 
 local function AddMessage(user, msg, life)
 	
@@ -235,7 +339,7 @@ function GM:PlayerDeath(user,wep,atk)
 		local l = ents.Create("prop_ragdoll");
 		if !(t:IsValid() && l:IsValid()) then return end
 		
-		user:GetRagdollEntity():Remove();
+		SafeRemoveEntity(user:GetRagdollEntity());
 		
 		t:SetModel("models/Gibs/Fast_Zombie_Torso.mdl");
 		l:SetModel("models/Gibs/Fast_Zombie_Legs.mdl");

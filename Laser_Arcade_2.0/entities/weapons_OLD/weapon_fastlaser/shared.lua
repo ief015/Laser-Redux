@@ -1,4 +1,3 @@
---[[
 if SERVER then
 	AddCSLuaFile("shared.lua")
 	SWEP.HoldType = "smg"
@@ -170,54 +169,6 @@ function SWEP:DrawHUD()
 		end
 	end
 end
-]]
-
-if SERVER then
-	AddCSLuaFile();
-	SWEP.HoldType = "smg";
-end
-
-if CLIENT then
-	SWEP.DrawAmmo = false;
-	SWEP.DrawCrosshair = false;
-	SWEP.PrintName = "Super Nonce";
-	SWEP.Author	= "ief015, rcdraco";
-	SWEP.Slot = 1;
-	SWEP.SlotPos = 0;
-	SWEP.IconLetter = "c";
-	SWEP.ViewModelFlip = false;
-	killicon.AddFont("Super Nonce", "CSKillIcons", SWEP.IconLetter, Color(255, 80, 0, 255));
-end
-
-SWEP.Base                  = "weapon_laserbase";
-
-SWEP.Spawnable             = true;
-SWEP.AdminSpawnable        = true;
-
-SWEP.ViewModel             = "models/weapons/v_IRifle.mdl";
-SWEP.WorldModel            = "models/weapons/w_IRifle.mdl";
-
-SWEP.Weight                = 10;
-SWEP.AutoSwitchTo          = false;
-SWEP.AutoSwitchFrom        = false;
-
-SWEP.Primary.Automatic     = true;
-SWEP.Secondary.Automatic   = true;
-
-SWEP.Primary.Anim          = ACT_VM_PRIMARYATTACK;
-SWEP.Primary.Cone          = 0.05;
-SWEP.Primary.Delay         = 0.15;
-SWEP.Primary.Kickback      = 200;
-SWEP.Primary.NumShots      = 2;
-SWEP.Primary.Recoil        = 0;
-SWEP.Primary.Sound         = "Weapon_AR2.Single";
-SWEP.Primary.UseCooldown   = false;
-
-SWEP.Secondary.Anim        = ACT_VM_PRIMARYATTACK;
-SWEP.Secondary.Cone        = 0.0;
-SWEP.Secondary.Delay       = 1.2;
-SWEP.Secondary.Kickback    = 400;
-SWEP.Secondary.NumShots    = 1;
-SWEP.Secondary.Recoil      = 1;
-SWEP.Secondary.Sound       = Sound("weapons/357/357_fire2.wav");
-SWEP.Secondary.UseCooldown = true;
+		
+	
+		

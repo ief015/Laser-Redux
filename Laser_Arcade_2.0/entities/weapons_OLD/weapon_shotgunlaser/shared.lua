@@ -1,4 +1,3 @@
---[[
 if SERVER then
 	AddCSLuaFile("shared.lua")
 	SWEP.HoldType = "shotgun"
@@ -155,54 +154,6 @@ function SWEP:DrawHUD()
 		end
 	end
 end
-]]
-
-if SERVER then
-	AddCSLuaFile();
-	SWEP.HoldType = "smg";
-end
-
-if CLIENT then
-	SWEP.DrawAmmo = false;
-	SWEP.DrawCrosshair = false;
-	SWEP.PrintName = "Scatter Laser";
-	SWEP.Author	= "ief015, rcdraco";
-	SWEP.Slot = 2;
-	SWEP.SlotPos = 0;
-	SWEP.IconLetter = "s";
-	SWEP.ViewModelFlip = false;
-	killicon.AddFont("Scatter Laser", "CSKillIcons", SWEP.IconLetter, Color(255, 80, 0, 255));
-end
-
-SWEP.Base                  = "weapon_laserbase";
-
-SWEP.Spawnable             = true;
-SWEP.AdminSpawnable        = true;
-
-SWEP.ViewModel             = "models/weapons/v_shotgun.mdl";
-SWEP.WorldModel            = "models/weapons/w_shotgun.mdl";
-
-SWEP.Weight                = 10;
-SWEP.AutoSwitchTo          = false;
-SWEP.AutoSwitchFrom        = false;
-
-SWEP.Primary.Automatic     = false;
-SWEP.Secondary.Automatic   = false;
-
-SWEP.Primary.Anim          = ACT_SHOTGUN_PUMP;
-SWEP.Primary.Cone          = 0.15;
-SWEP.Primary.Delay         = 1.8;
-SWEP.Primary.Kickback      = 1000;
-SWEP.Primary.NumShots      = 16;
-SWEP.Primary.Recoil        = 1;
-SWEP.Primary.Sound         = Sound("weapons/flaregun/fire.wav");
-SWEP.Primary.UseCooldown   = true;
-
-SWEP.Secondary.Anim        = ACT_SHOTGUN_PUMP;
-SWEP.Secondary.Cone        = 0.05;
-SWEP.Secondary.Delay       = 2.5;
-SWEP.Secondary.Kickback    = 500;
-SWEP.Secondary.NumShots    = 12;
-SWEP.Primary.Recoil        = 1;
-SWEP.Secondary.Sound       = Sound("weapons/flaregun/fire.wav");
-SWEP.Secondary.UseCooldown = true;
+		
+	
+		

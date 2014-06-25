@@ -1,4 +1,3 @@
---[[
 if SERVER then
 	AddCSLuaFile("shared.lua")
 	SWEP.HoldType = "ar2"
@@ -16,7 +15,7 @@ if CLIENT then
 	killicon.AddFont("Laser Nonce", "CSKillIcons", SWEP.IconLetter, Color(255, 80, 0, 255))
 end
 
-SWEP.Base				= "weapon_laserbase"
+SWEP.Base				= "weapon_base"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -30,13 +29,14 @@ SWEP.AutoSwitchFrom		= true
 
 SWEP.Primary.Sound			= Sound("npc/sniper/sniper1.wav")
 SWEP.Primary.Recoil			= 2.0
+SWEP.Primary.Damage			= 1000 -- LOL!
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Automatic		= false
-SWEP.Primary.Ammo			= "none"
 SWEP.Primary.Cone			= 0.02
-SWEP.Primary.ClipSize		= -1
-SWEP.Primary.DefaultClip	= -1
+SWEP.Primary.ClipSize		= 12
 SWEP.Primary.Delay			= 0.25
+SWEP.Primary.DefaultClip	= SWEP.Primary.ClipSize * 3
+SWEP.Primary.Automatic		= false
+SWEP.Primary.Ammo			= "pistol"
 
 SWEP.Secondary.ClipSize		= -1
 SWEP.Secondary.DefaultClip	= -1
@@ -44,19 +44,23 @@ SWEP.Secondary.Automatic	= false
 SWEP.Secondary.Ammo			= "none"
 
 SWEP.NextFire = 0
-SWEP.Kickback = 400
+SWEP.Kickback = 400 -- This many units back.
 
-
-function SWEP:ShootLaser(cone)
+-- Laser effect
+function SWEP:ShootLaser(startp,endp,ang)
+	local effect = EffectData()
+	effect:SetStart(endp)
+	effect:SetOrigin(startp)
+	effect:SetEntity(self.Owner)
+	util.Effect("laser",effect)
 	
-	if SERVER then
-		FireLaser(self.Owner, self.Weapon, self.Owner,
-		          self.Owner:GetShootPos() - Vector(0, 0, 10),
-		          (self.Owner:GetAimVector() + Vector(math.Rand(-cone, cone), math.Rand(-cone, cone),math.Rand(-cone, cone))),
-		          self.Kickback);
-		
-	end
+	local effect = EffectData()
+	effect:SetStart(startp)
+	effect:SetOrigin(endp)
+	effect:SetEntity(self.Owner)
+	util.Effect("laser",effect)
 	
+	util.BlastDamage(self.Weapon,self.Owner,endp,16,self.Primary.Damage)
 end
 
 -- Tell us to draw a bar
@@ -143,55 +147,6 @@ function SWEP:DrawHUD()
 		end
 	end
 end
-]]
-
-
-
-
-
-if SERVER then
-	AddCSLuaFile();
-	SWEP.HoldType = "ar2";
-end
-
-if CLIENT then
-	SWEP.DrawAmmo = false;
-	SWEP.DrawCrosshair = false;
-	SWEP.PrintName = "Laser Nonce";
-	SWEP.Author	= "ief015, Gmod4Ever";
-	SWEP.Slot = 0;
-	SWEP.SlotPos = 0;
-	SWEP.IconLetter = "c";
-	SWEP.ViewModelFlip = false;
-	killicon.AddFont("Laser Nonce", "CSKillIcons", SWEP.IconLetter, Color(255, 80, 0, 255));
-end
-
-SWEP.Base                  = "weapon_laserbase";
-
-SWEP.Spawnable             = true;
-SWEP.AdminSpawnable        = true;
-
-SWEP.ViewModel             = "models/weapons/v_rif_famas.mdl";
-SWEP.WorldModel            = "models/weapons/w_rif_famas.mdl";
-
-SWEP.Weight                = 5;
-SWEP.AutoSwitchTo          = false;
-SWEP.AutoSwitchFrom        = false;
-
-SWEP.Primary.Anim          = ACT_VM_PRIMARYATTACK;
-SWEP.Primary.Cone          = 0;
-SWEP.Primary.Delay         = 0.25;
-SWEP.Primary.Kickback      = 400;
-SWEP.Primary.NumShots      = 1;
-SWEP.Primary.Recoil        = 0;
-SWEP.Primary.Sound         = Sound("npc/sniper/sniper1.wav");
-SWEP.Primary.UseCooldown   = false;
-
-SWEP.Secondary.Anim        = ACT_VM_PRIMARYATTACK;
-SWEP.Secondary.Cone        = 0.1;
-SWEP.Secondary.Delay       = 5;
-SWEP.Secondary.Kickback    = 600;
-SWEP.Secondary.NumShots    = 12;
-SWEP.Secondary.Recoil      = 3;
-SWEP.Secondary.Sound       = Sound("weapons/shotgun/shotgun_dbl_fire.wav");
-SWEP.Secondary.UseCooldown = true;
+		
+	
+		

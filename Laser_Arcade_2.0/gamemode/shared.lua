@@ -10,10 +10,11 @@ laser.TeamGoal          = 50; -- How many total frags must a team get for the ne
 laser.IntermissionTime  = 15; -- How many seconds to show board before going to next map
 laser.EvenizerIntervals = 60;
 laser.EvenizeDelay      = 5;
-
-laser.NextEvenize = CurTime() + laser.EvenizerIntervals;
+laser.NextEvenize       = CurTime() + laser.EvenizerIntervals;
 
 laser.MIN_DEATH_TIME = 5;
+
+laser.LASER_DAMAGE = 100;
 
 laser.TEAM_RED  = 1;
 laser.TEAM_BLUE = 2;
@@ -56,6 +57,7 @@ end
 
 -- Returns a random number shared between the server and client.
 --[[
+if SERVER then SetGlobalString('laser_randomSeed', tostring(os.time())); end
 local iseed = 0;
 local seed = GetGlobalString('laser_randomSeed');
 function laser.getSharedRandom(min, max)

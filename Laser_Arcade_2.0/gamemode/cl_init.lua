@@ -112,6 +112,27 @@ surface.CreateFont( "Font_64", {font = "coolvetica",
 	outline = false,
 } )
 
+
+net.Receive('laser_LaserEffect', function()
+	
+	local owner  = net.ReadEntity();
+	local start  = net.ReadVector();
+	local endpos = net.ReadVector();
+	
+	local effect = EffectData();
+	effect:SetStart(start);
+	effect:SetOrigin(endpos);
+	effect:SetEntity(owner);
+	util.Effect("laser", effect);
+	
+	effect = EffectData();
+	effect:SetStart(endpos);
+	effect:SetOrigin(start);
+	effect:SetEntity(owner);
+	util.Effect("laser", effect);
+	
+end)
+
 function AddMessage(text,life)
 	
 	local i = #CurMessages + 1
