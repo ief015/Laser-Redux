@@ -1,0 +1,42 @@
+@include "base.fgd"
+
+@PointClass base(Targetname) size( 16 16 16) sphere() color( 255 100 0 ) = lr_weapon_spawner : "Laser Redux Weapon Spawner"
+[
+	
+	WeaponType(string) : "Weapon type" : : "The type weapon to spawn. (Ex. 'weapon_laser') Nothing means random Laser Redux weapon."
+	
+	SpawnType(choices) : "Spawning settings" : 1 : "How the weapon should be spawned" = 
+	[
+		0 : "Only when fired (use inputs)"
+		1 : "Use spawn timer"
+		2 : "Always spawned (instant)"
+	]
+	
+	SpawnTimer(float) : "Spawn time" : "15.0" : "How long until the weapon is respawned after being picked up. This is used if 'Spawning settings' is set to 'Use spawn timer'."
+	
+	StartSpawned(choices) : "Start spawned" : 1 : "Should the weapon be initially spawned?" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	// When fired, spawn the weapon.
+	input DoSpawn(void) : "Spawn weapon."
+	
+	// Outputs when the weapon is picked up.
+	output OnPickup(void) : "When the weapon is picked up."
+	
+	// Outputs when the weapon is respawned.
+	output OnRespawn(void) : "When the weapon is respawned."
+]
+
+// env_sprite: ar_flash, flare1.vmt, scale = 0.5, render mode = "World Space Glow"
+// ambient_generic: ar_sound, "NPC_RollerMine.Shock", volume = 10, max audible distance = 768
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 

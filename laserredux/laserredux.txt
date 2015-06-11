@@ -1,0 +1,12 @@
+"laserredux"
+{
+	"base"		"base"
+	"title"		"Laser Redux"
+	"maps"		"^lr_|^la_"
+	"menusystem"	"1"
+
+	"settings"
+	{
+		// TODO: put some settings here
+	}
+}

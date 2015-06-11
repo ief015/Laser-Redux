@@ -1,0 +1,43 @@
+General gameplay:
+- Add mild fall damage?
+- Ammo should not display if the weapon doesn't use ammo.
+- Laser nonce should always have infinite ammo. Maybe make the other weapons limited in ammo?
+
+
+
+weapon_laser "Laser Nonce"
+- If fall damage is added, right click shotgun takes too long to recharge.
+
+weapon_fastlaser
+- Primary fire cone spread is too large and makes the weapon very situational ... too close-quarters.
+
+weapon_lasergun "Mini-laser gun"
+- Fires too fast and recharge is too long to be practical.
+- Could be a nice sidearm if firerate was lowered and an "overheating" mechanic was added.
+
+weapon_lasergrenade
+- No throwing animation is played.
+- The grenade entity appears to be invisible.
+- Maybe detonate on impact instead of fuse-time?
+- Possibly useless? It is too situational.
+
+weapon_lightning
+- Errors on load:
+[ERROR] gamemodes/laser_arcade_2.0/entities/weapons/weapon_lightning/shared.lua:144: unexpected symbol near 'if'
+  1. unknown - gamemodes/laser_arcade_2.0/entities/weapons/weapon_lightning/shared.lua:0
+
+weapon_shotgunlaser
+- Feels solid.
+- Primary fire charge time may be too long.
+- Charging may be too long if fall damage is implemented.
+
+weapon_sniperlaser
+- No complaints, feels solid.
+- Should crosshair only show up while scoped instead of all the time?
+
+weapon_translocator
+- Possibly useless?
+- Errors when firing beacon:
+[ERROR] gamemodes/laser_arcade_2.0/entities/weapons/weapon_translocator/shared.lua:90: attempt to call method 'GetAngle' (a nil value)
+  1. unknown - gamemodes/laser_arcade_2.0/entities/weapons/weapon_translocator/shared.lua:90
+

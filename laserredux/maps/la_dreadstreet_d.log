@@ -1,0 +1,226 @@
+
+
+
+materialPath: Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\Laser_Arcade_2.0\content\maps\la_dreadstreet_d.vmf
+Could not locate 'GameData' key in z:\steam\steamapps\ief015\garrysmod\garrysmod\gameinfo.txt
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 48 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\Laser_Arcade_2.0\content\maps\la_dreadstreet_d.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_borealis01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_borealis01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (54992 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 65 texinfos to 50
+Reduced 10 texdatas to 10 (215 bytes to 215)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\Laser_Arcade_2.0\content\maps\la_dreadstreet_d.bsp
+0 seconds elapsed
+
+
+
+8 threads
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laser_arcade_2.0\content\maps\la_dreadstreet_d.bsp
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laser_arcade_2.0\content\maps\la_dreadstreet_d.prt
+ 125 portalclusters
+ 359 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 7 visible clusters (0.05%)
+Total clusters visible: 13734
+Average clusters visible: 109
+Building PAS...
+Average clusters audible: 125
+visdatasize:5028  compressed from 4000
+writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laser_arcade_2.0\content\maps\la_dreadstreet_d.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laser_arcade_2.0\content\maps\la_dreadstreet_d.bsp
+812 faces
+477196 square feet [68716240.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+812 patches before subdivision
+31134 patches after subdivision
+7 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 2800085, max 386
+transfer lists:  21.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(69368, 54296, 48881)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(19540, 10703, 8143)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(6196, 2565, 1852)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(1918, 536, 351)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(627, 125, 78)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(206, 27, 15)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(70, 6, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(24, 1, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(8, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0188 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                146/8192         1752/98304    ( 1.8%) 
+brushsides            1014/65536        8112/524288   ( 1.5%) 
+planes                 538/65536       10760/1310720  ( 0.8%) 
+vertexes              1249/65536       14988/786432   ( 1.9%) 
+nodes                  262/65536        8384/2097152  ( 0.4%) 
+texinfos                50/12288        3600/884736   ( 0.4%) 
+texdata                 10/2048          320/65536    ( 0.5%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                  812/65536       45472/3670016  ( 1.2%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces              510/65536       28560/3670016  ( 0.8%) 
+leaves                 264/65536        8448/2097152  ( 0.4%) 
+leaffaces              916/65536        1832/131072   ( 1.4%) 
+leafbrushes            338/65536         676/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             5966/512000      23864/2048000  ( 1.2%) 
+edges                 3660/256000      14640/1024000  ( 1.4%) 
+LDR worldlights          7/8192          616/720896   ( 0.1%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            101/32768        1010/327680   ( 0.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          1713/65536        3426/131072   ( 2.6%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]      528684/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]        5028/16777216 ( 0.0%) 
+entdata               [variable]        3735/393216   ( 0.9%) 
+LDR ambient table      264/65536        1056/262144   ( 0.4%) 
+HDR ambient table      264/65536        1056/262144   ( 0.4%) 
+LDR leaf ambient      1275/65536       35700/1835008  ( 1.9%) 
+HDR leaf ambient       264/65536        7392/1835008  ( 0.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       86774/0        ( 0.0%) 
+physics               [variable]       54992/4194304  ( 1.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 2299
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laser_arcade_2.0\content\maps\la_dreadstreet_d.bsp
+9 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laser_arcade_2.0\content\maps\la_dreadstreet_d.bsp
+812 faces
+477196 square feet [68716240.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+812 patches before subdivision
+31134 patches after subdivision
+7 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 2800085, max 386
+transfer lists:  21.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(69368, 54296, 48881)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(19540, 10703, 8143)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(6196, 2565, 1852)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(1918, 536, 351)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(627, 125, 78)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(206, 27, 15)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(70, 6, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(24, 1, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(8, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0204 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                146/8192         1752/98304    ( 1.8%) 
+brushsides            1014/65536        8112/524288   ( 1.5%) 
+planes                 538/65536       10760/1310720  ( 0.8%) 
+vertexes              1249/65536       14988/786432   ( 1.9%) 
+nodes                  262/65536        8384/2097152  ( 0.4%) 
+texinfos                50/12288        3600/884736   ( 0.4%) 
+texdata                 10/2048          320/65536    ( 0.5%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                  812/65536       45472/3670016  ( 1.2%) 
+hdr faces              812/65536       45472/3670016  ( 1.2%) 
+origfaces              510/65536       28560/3670016  ( 0.8%) 
+leaves                 264/65536        8448/2097152  ( 0.4%) 
+leaffaces              916/65536        1832/131072   ( 1.4%) 
+leafbrushes            338/65536         676/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             5966/512000      23864/2048000  ( 1.2%) 
+edges                 3660/256000      14640/1024000  ( 1.4%) 
+LDR worldlights          7/8192          616/720896   ( 0.1%) 
+HDR worldlights          7/8192          616/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            101/32768        1010/327680   ( 0.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          1713/65536        3426/131072   ( 2.6%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]      528684/0        ( 0.0%) 
+HDR lightdata         [variable]      528684/0        ( 0.0%) 
+visdata               [variable]        5028/16777216 ( 0.0%) 
+entdata               [variable]        3735/393216   ( 0.9%) 
+LDR ambient table      264/65536        1056/262144   ( 0.4%) 
+HDR ambient table      264/65536        1056/262144   ( 0.4%) 
+LDR leaf ambient      1275/65536       35700/1835008  ( 1.9%) 
+HDR leaf ambient      1275/65536       35700/1835008  ( 1.9%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       86774/0        ( 0.0%) 
+physics               [variable]       54992/4194304  ( 1.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 2299
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laser_arcade_2.0\content\maps\la_dreadstreet_d.bsp
+9 seconds elapsed

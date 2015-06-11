@@ -1,0 +1,191 @@
+include 'shared.lua'
+
+include 'cl_hud.lua'
+include 'cl_scoreboard.lua'
+include 'cl_lasers.lua'
+
+
+surface.CreateFont('lr_planetside14o', {font = 'PlanetSide2',
+	size = 14,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = false,
+	additive = false,
+	outline = true,
+});
+surface.CreateFont('lr_planetside18s', {font = 'PlanetSide2',
+	size = 18,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = true,
+	additive = false,
+	outline = false,
+});
+surface.CreateFont('lr_planetside20', {font = 'PlanetSide2',
+	size = 20,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = false,
+	additive = false,
+	outline = false,
+});
+--[[
+surface.CreateFont('lr_planetside30', {font = 'PlanetSide2',
+	size = 30,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = false,
+	additive = false,
+	outline = false,
+});
+]]
+surface.CreateFont('lr_planetside30s', {font = 'PlanetSide2',
+	size = 30,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = true,
+	additive = false,
+	outline = false,
+});
+surface.CreateFont('lr_planetside34', {font = 'PlanetSide2',
+	size = 34,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = false,
+	additive = false,
+	outline = false,
+});
+surface.CreateFont('lr_airstream34s', {font = 'Airstream',
+	size = 34,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = true,
+	additive = false,
+	outline = false,
+});
+surface.CreateFont('lr_planetside40', {font = 'PlanetSide2',
+	size = 40,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = false,
+	additive = false,
+	outline = false,
+});
+surface.CreateFont('lr_planetside64', {font = 'PlanetSide2',
+	size = 64,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = false,
+	additive = false,
+	outline = false,
+});
+surface.CreateFont('lr_airstream64s', {font = 'Airstream',
+	size = 64,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = true,
+	additive = false,
+	outline = false,
+});
+surface.CreateFont('lr_airstream128', {font = 'Airstream',
+	size = 128,
+	weight = 500,
+	blursize = 0,
+	scanlines = 0,
+	antialias = true,
+	underline = false,
+	italic = false,
+	strikeout = false,
+	symbol = false,
+	rotary = false,
+	shadow = false,
+	additive = false,
+	outline = false,
+});
+
+--[[
+hook.Add('InitPostEntity', 'laser_TestRadio', function()
+	
+	sound.PlayURL('http://popplers5.bandcamp.com/download/track?enc=mp3-128&fsig=31dd2bb62fb12b68bd1c0bc3a9b17bbf&id=3480374905&stream=1&ts=1405546842.0', 'noplay noblock', function(stream, errID, errName)
+		
+		if not IsValid(stream) then
+			MsgN("Could not play stream. (Error code " .. errID .. ": " .. errName .. ")");
+			return;
+		end
+		
+		stream:Play();
+		
+	end);
+	
+end);
+]]

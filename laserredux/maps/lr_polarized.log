@@ -1,0 +1,968 @@
+
+
+
+materialPath: Z:\Steam\SteamApps\common\Source SDK Base 2013 Multiplayer\gmodSDK\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in z:\steam\steamapps\common\source sdk base 2013 multiplayer\gmodsdk\gameinfo.txt
+Patching WVT material: maps/lr_polarized/dev/dev_blendmeasure_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+WARNING: Map using power 4 displacements, terrain physics cannot be compressed, map will need additional memory and CPU.
+done (0) (934885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 22 texinfos to 13
+Reduced 11 texdatas to 8 (330 bytes to 207)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+1 second elapsed
+
+
+
+8 threads
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt
+ 329 portalclusters
+ 810 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 107321
+Average clusters visible: 326
+Building PAS...
+Average clusters audible: 327
+visdatasize:30198  compressed from 31584
+writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+2068 faces
+6675114 square feet [961216512.00 square inches]
+16 Displacements
+1186123 Square Feet [170801712.00 Square Inches]
+2068 patches before subdivision
+104292 patches after subdivision
+2 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 2855194, max 1040
+transfer lists:  21.8 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1416, 1399, 1399)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(27587, 27573, 27569)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(601, 600, 600)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3700, 3698, 3697)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(147, 147, 147)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(529, 529, 529)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(31, 31, 31)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(79, 79, 79)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 6, 6)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(12, 12, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(2, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0731 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 19/8192          228/98304    ( 0.2%) 
+brushsides             114/65536         912/524288   ( 0.2%) 
+planes                 124/65536        2480/1310720  ( 0.2%) 
+vertexes              2068/65536       24816/786432   ( 3.2%) 
+nodes                  735/65536       23520/2097152  ( 1.1%) 
+texinfos                13/12288         936/884736   ( 0.1%) 
+texdata                  8/2048          256/65536    ( 0.4%) 
+dispinfos               16/0            2816/0        ( 0.0%) 
+disp_verts            4624/0           92480/0        ( 0.0%) 
+disp_tris             8192/0           16384/0        ( 0.0%) 
+disp_lmsamples     1107520/0         1107520/0        ( 0.0%) 
+faces                 2068/65536      115808/3670016  ( 3.2%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces               54/65536        3024/3670016  ( 0.1%) 
+leaves                 737/65536       23584/2097152  ( 1.1%) 
+leaffaces             2132/65536        4264/131072   ( 3.3%) 
+leafbrushes            592/65536        1184/131072   ( 0.9%) 
+areas                    3/256            24/2048     ( 1.2%) 
+surfedges             8764/512000      35056/2048000  ( 1.7%) 
+edges                 4455/256000      17820/1024000  ( 1.7%) 
+LDR worldlights          2/8192          176/720896   ( 0.0%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            2/32768          24/393216   ( 0.0%) 
+waterstrips             58/32768         580/327680   ( 0.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          1080/65536        2160/131072   ( 1.6%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]     3056952/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]       30198/16777216 ( 0.2%) 
+entdata               [variable]         868/393216   ( 0.2%) 
+LDR ambient table      737/65536        2948/262144   ( 1.1%) 
+HDR ambient table      737/65536        2948/262144   ( 1.1%) 
+LDR leaf ambient      3199/65536       89572/1835008  ( 4.9%) 
+HDR leaf ambient       737/65536       20636/1835008  ( 1.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]      106648/0        ( 0.0%) 
+physics               [variable]      934885/4194304  (22.3%) 
+physics terrain       [variable]           0/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 4412
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+18 seconds elapsed
+
+
+
+materialPath: Z:\Steam\SteamApps\common\Source SDK Base 2013 Multiplayer\gmodSDK\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in z:\steam\steamapps\common\source sdk base 2013 multiplayer\gmodsdk\gameinfo.txt
+Patching WVT material: maps/lr_polarized/dev/dev_blendmeasure_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+WARNING: Map using power 4 displacements, terrain physics cannot be compressed, map will need additional memory and CPU.
+done (0) (934885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 23 texinfos to 14
+Reduced 10 texdatas to 7 (308 bytes to 186)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+1 second elapsed
+
+
+
+8 threads
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt
+ 329 portalclusters
+ 810 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 107321
+Average clusters visible: 326
+Building PAS...
+Average clusters audible: 327
+visdatasize:30198  compressed from 31584
+writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+916 faces
+6675114 square feet [961216512.00 square inches]
+16 Displacements
+1186123 Square Feet [170801712.00 Square Inches]
+916 patches before subdivision
+22500 patches after subdivision
+2 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 254938, max 201
+transfer lists:   1.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1682, 1644, 1644)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(485, 473, 473)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(31, 29, 29)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(9, 9, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 1)
+Build Patch/Sample Hash Table(s).....Done<0.0068 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 19/8192          228/98304    ( 0.2%) 
+brushsides             114/65536         912/524288   ( 0.2%) 
+planes                 124/65536        2480/1310720  ( 0.2%) 
+vertexes               868/65536       10416/786432   ( 1.3%) 
+nodes                  735/65536       23520/2097152  ( 1.1%) 
+texinfos                14/12288        1008/884736   ( 0.1%) 
+texdata                  7/2048          224/65536    ( 0.3%) 
+dispinfos               16/0            2816/0        ( 0.0%) 
+disp_verts            4624/0           92480/0        ( 0.0%) 
+disp_tris             8192/0           16384/0        ( 0.0%) 
+disp_lmsamples     1107520/0         1107520/0        ( 0.0%) 
+faces                  916/65536       51296/3670016  ( 1.4%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces               54/65536        3024/3670016  ( 0.1%) 
+leaves                 737/65536       23584/2097152  ( 1.1%) 
+leaffaces              980/65536        1960/131072   ( 1.5%) 
+leafbrushes            592/65536        1184/131072   ( 0.9%) 
+areas                    3/256            24/2048     ( 1.2%) 
+surfedges             4060/512000      16240/2048000  ( 0.8%) 
+edges                 2103/256000       8412/1024000  ( 0.8%) 
+LDR worldlights          2/8192          176/720896   ( 0.0%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            2/32768          24/393216   ( 0.0%) 
+waterstrips             58/32768         580/327680   ( 0.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           792/65536        1584/131072   ( 1.2%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]      388344/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]       30198/16777216 ( 0.2%) 
+entdata               [variable]         868/393216   ( 0.2%) 
+LDR ambient table      737/65536        2948/262144   ( 1.1%) 
+HDR ambient table      737/65536        2948/262144   ( 1.1%) 
+LDR leaf ambient      4926/65536      137928/1835008  ( 7.5%) 
+HDR leaf ambient       737/65536       20636/1835008  ( 1.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]      106645/0        ( 0.0%) 
+physics               [variable]      934885/4194304  (22.3%) 
+physics terrain       [variable]           0/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 2012
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+7 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+916 faces
+6675114 square feet [961216512.00 square inches]
+16 Displacements
+1186123 Square Feet [170801712.00 Square Inches]
+916 patches before subdivision
+22500 patches after subdivision
+2 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 254938, max 201
+transfer lists:   1.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1682, 1644, 1644)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(485, 473, 473)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(31, 29, 29)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(9, 9, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 1)
+Build Patch/Sample Hash Table(s).....Done<0.0074 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 19/8192          228/98304    ( 0.2%) 
+brushsides             114/65536         912/524288   ( 0.2%) 
+planes                 124/65536        2480/1310720  ( 0.2%) 
+vertexes               868/65536       10416/786432   ( 1.3%) 
+nodes                  735/65536       23520/2097152  ( 1.1%) 
+texinfos                14/12288        1008/884736   ( 0.1%) 
+texdata                  7/2048          224/65536    ( 0.3%) 
+dispinfos               16/0            2816/0        ( 0.0%) 
+disp_verts            4624/0           92480/0        ( 0.0%) 
+disp_tris             8192/0           16384/0        ( 0.0%) 
+disp_lmsamples     1107520/0         1107520/0        ( 0.0%) 
+faces                  916/65536       51296/3670016  ( 1.4%) 
+hdr faces              916/65536       51296/3670016  ( 1.4%) 
+origfaces               54/65536        3024/3670016  ( 0.1%) 
+leaves                 737/65536       23584/2097152  ( 1.1%) 
+leaffaces              980/65536        1960/131072   ( 1.5%) 
+leafbrushes            592/65536        1184/131072   ( 0.9%) 
+areas                    3/256            24/2048     ( 1.2%) 
+surfedges             4060/512000      16240/2048000  ( 0.8%) 
+edges                 2103/256000       8412/1024000  ( 0.8%) 
+LDR worldlights          2/8192          176/720896   ( 0.0%) 
+HDR worldlights          2/8192          176/720896   ( 0.0%) 
+leafwaterdata            2/32768          24/393216   ( 0.0%) 
+waterstrips             58/32768         580/327680   ( 0.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           792/65536        1584/131072   ( 1.2%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]      388344/0        ( 0.0%) 
+HDR lightdata         [variable]      388344/0        ( 0.0%) 
+visdata               [variable]       30198/16777216 ( 0.2%) 
+entdata               [variable]         868/393216   ( 0.2%) 
+LDR ambient table      737/65536        2948/262144   ( 1.1%) 
+HDR ambient table      737/65536        2948/262144   ( 1.1%) 
+LDR leaf ambient      4926/65536      137928/1835008  ( 7.5%) 
+HDR leaf ambient      4926/65536      137928/1835008  ( 7.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]      106645/0        ( 0.0%) 
+physics               [variable]      934885/4194304  (22.3%) 
+physics terrain       [variable]           0/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 2012
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+7 seconds elapsed
+
+
+
+materialPath: Z:\Steam\SteamApps\common\Source SDK Base 2013 Multiplayer\gmodSDK\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in z:\steam\steamapps\common\source sdk base 2013 multiplayer\gmodsdk\gameinfo.txt
+Patching WVT material: maps/lr_polarized/dev/dev_blendmeasure_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+WARNING: Map using power 4 displacements, terrain physics cannot be compressed, map will need additional memory and CPU.
+done (0) (934885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 23 texinfos to 14
+Reduced 10 texdatas to 7 (308 bytes to 186)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+1 second elapsed
+
+
+
+8 threads
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt
+ 329 portalclusters
+ 810 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 107321
+Average clusters visible: 326
+Building PAS...
+Average clusters audible: 327
+visdatasize:30198  compressed from 31584
+writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+916 faces
+6675114 square feet [961216512.00 square inches]
+16 Displacements
+1186123 Square Feet [170801712.00 Square Inches]
+916 patches before subdivision
+22500 patches after subdivision
+2 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 254938, max 201
+transfer lists:   1.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1774, 1733, 1733)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(559, 546, 546)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(32, 30, 30)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(11, 10, 10)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 1)
+Build Patch/Sample Hash Table(s).....Done<0.0067 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 19/8192          228/98304    ( 0.2%) 
+brushsides             114/65536         912/524288   ( 0.2%) 
+planes                 124/65536        2480/1310720  ( 0.2%) 
+vertexes               868/65536       10416/786432   ( 1.3%) 
+nodes                  735/65536       23520/2097152  ( 1.1%) 
+texinfos                14/12288        1008/884736   ( 0.1%) 
+texdata                  7/2048          224/65536    ( 0.3%) 
+dispinfos               16/0            2816/0        ( 0.0%) 
+disp_verts            4624/0           92480/0        ( 0.0%) 
+disp_tris             8192/0           16384/0        ( 0.0%) 
+disp_lmsamples     1107520/0         1107520/0        ( 0.0%) 
+faces                  916/65536       51296/3670016  ( 1.4%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces               54/65536        3024/3670016  ( 0.1%) 
+leaves                 737/65536       23584/2097152  ( 1.1%) 
+leaffaces              980/65536        1960/131072   ( 1.5%) 
+leafbrushes            592/65536        1184/131072   ( 0.9%) 
+areas                    3/256            24/2048     ( 1.2%) 
+surfedges             4060/512000      16240/2048000  ( 0.8%) 
+edges                 2103/256000       8412/1024000  ( 0.8%) 
+LDR worldlights          2/8192          176/720896   ( 0.0%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            2/32768          24/393216   ( 0.0%) 
+waterstrips             58/32768         580/327680   ( 0.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           792/65536        1584/131072   ( 1.2%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]      388344/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]       30198/16777216 ( 0.2%) 
+entdata               [variable]         868/393216   ( 0.2%) 
+LDR ambient table      737/65536        2948/262144   ( 1.1%) 
+HDR ambient table      737/65536        2948/262144   ( 1.1%) 
+LDR leaf ambient      4925/65536      137900/1835008  ( 7.5%) 
+HDR leaf ambient       737/65536       20636/1835008  ( 1.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]      106645/0        ( 0.0%) 
+physics               [variable]      934885/4194304  (22.3%) 
+physics terrain       [variable]           0/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 2012
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+7 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+916 faces
+6675114 square feet [961216512.00 square inches]
+16 Displacements
+1186123 Square Feet [170801712.00 Square Inches]
+916 patches before subdivision
+22500 patches after subdivision
+2 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 254938, max 201
+transfer lists:   1.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1774, 1733, 1733)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(559, 546, 546)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(32, 30, 30)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(11, 10, 10)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 1)
+Build Patch/Sample Hash Table(s).....Done<0.0076 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 19/8192          228/98304    ( 0.2%) 
+brushsides             114/65536         912/524288   ( 0.2%) 
+planes                 124/65536        2480/1310720  ( 0.2%) 
+vertexes               868/65536       10416/786432   ( 1.3%) 
+nodes                  735/65536       23520/2097152  ( 1.1%) 
+texinfos                14/12288        1008/884736   ( 0.1%) 
+texdata                  7/2048          224/65536    ( 0.3%) 
+dispinfos               16/0            2816/0        ( 0.0%) 
+disp_verts            4624/0           92480/0        ( 0.0%) 
+disp_tris             8192/0           16384/0        ( 0.0%) 
+disp_lmsamples     1107520/0         1107520/0        ( 0.0%) 
+faces                  916/65536       51296/3670016  ( 1.4%) 
+hdr faces              916/65536       51296/3670016  ( 1.4%) 
+origfaces               54/65536        3024/3670016  ( 0.1%) 
+leaves                 737/65536       23584/2097152  ( 1.1%) 
+leaffaces              980/65536        1960/131072   ( 1.5%) 
+leafbrushes            592/65536        1184/131072   ( 0.9%) 
+areas                    3/256            24/2048     ( 1.2%) 
+surfedges             4060/512000      16240/2048000  ( 0.8%) 
+edges                 2103/256000       8412/1024000  ( 0.8%) 
+LDR worldlights          2/8192          176/720896   ( 0.0%) 
+HDR worldlights          2/8192          176/720896   ( 0.0%) 
+leafwaterdata            2/32768          24/393216   ( 0.0%) 
+waterstrips             58/32768         580/327680   ( 0.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           792/65536        1584/131072   ( 1.2%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]      388344/0        ( 0.0%) 
+HDR lightdata         [variable]      388344/0        ( 0.0%) 
+visdata               [variable]       30198/16777216 ( 0.2%) 
+entdata               [variable]         868/393216   ( 0.2%) 
+LDR ambient table      737/65536        2948/262144   ( 1.1%) 
+HDR ambient table      737/65536        2948/262144   ( 1.1%) 
+LDR leaf ambient      4925/65536      137900/1835008  ( 7.5%) 
+HDR leaf ambient      4925/65536      137900/1835008  ( 7.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]      106645/0        ( 0.0%) 
+physics               [variable]      934885/4194304  (22.3%) 
+physics terrain       [variable]           0/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 2012
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+7 seconds elapsed
+
+
+
+materialPath: Z:\Steam\SteamApps\common\Source SDK Base 2013 Multiplayer\gmodSDK\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in z:\steam\steamapps\common\source sdk base 2013 multiplayer\gmodsdk\gameinfo.txt
+Patching WVT material: maps/lr_polarized/dev/dev_blendmeasure_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+WARNING: Map using power 4 displacements, terrain physics cannot be compressed, map will need additional memory and CPU.
+done (0) (934885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 23 texinfos to 14
+Reduced 10 texdatas to 7 (308 bytes to 186)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+1 second elapsed
+
+
+
+materialPath: Z:\Steam\SteamApps\common\Source SDK Base 2013 Multiplayer\gmodSDK\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in z:\steam\steamapps\common\source sdk base 2013 multiplayer\gmodsdk\gameinfo.txt
+Patching WVT material: maps/lr_polarized/dev/dev_blendmeasure_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+WARNING: Map using power 4 displacements, terrain physics cannot be compressed, map will need additional memory and CPU.
+done (0) (934885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 23 texinfos to 14
+Reduced 10 texdatas to 7 (308 bytes to 186)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+1 second elapsed
+
+
+
+8 threads
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt
+ 329 portalclusters
+ 810 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 107321
+Average clusters visible: 326
+Building PAS...
+Average clusters audible: 327
+visdatasize:30198  compressed from 31584
+writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+3 seconds elapsed
+
+
+
+materialPath: Z:\Steam\SteamApps\common\Source SDK Base 2013 Multiplayer\gmodSDK\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in z:\steam\steamapps\common\source sdk base 2013 multiplayer\gmodsdk\gameinfo.txt
+Patching WVT material: maps/lr_polarized/dev/dev_blendmeasure_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+WARNING: Map using power 4 displacements, terrain physics cannot be compressed, map will need additional memory and CPU.
+done (0) (934885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 23 texinfos to 14
+Reduced 10 texdatas to 7 (308 bytes to 186)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+1 second elapsed
+
+
+
+8 threads
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt
+ 329 portalclusters
+ 810 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 107321
+Average clusters visible: 326
+Building PAS...
+Average clusters audible: 327
+visdatasize:30198  compressed from 31584
+writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+3 seconds elapsed
+
+
+
+materialPath: Z:\Steam\SteamApps\common\Source SDK Base 2013 Multiplayer\gmodSDK\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in z:\steam\steamapps\common\source sdk base 2013 multiplayer\gmodsdk\gameinfo.txt
+Patching WVT material: maps/lr_polarized/dev/dev_blendmeasure_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+WARNING: Map using power 4 displacements, terrain physics cannot be compressed, map will need additional memory and CPU.
+done (0) (934885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 23 texinfos to 14
+Reduced 10 texdatas to 7 (308 bytes to 186)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+1 second elapsed
+
+
+
+8 threads
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt
+ 329 portalclusters
+ 810 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 107321
+Average clusters visible: 326
+Building PAS...
+Average clusters audible: 327
+visdatasize:30198  compressed from 31584
+writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+3 seconds elapsed
+
+
+
+materialPath: Z:\Steam\SteamApps\common\Source SDK Base 2013 Multiplayer\gmodSDK\materials
+Loading Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in z:\steam\steamapps\common\source sdk base 2013 multiplayer\gmodsdk\gameinfo.txt
+Patching WVT material: maps/lr_polarized/dev/dev_blendmeasure_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+WARNING: Map using power 4 displacements, terrain physics cannot be compressed, map will need additional memory and CPU.
+done (0) (934885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 23 texinfos to 14
+Reduced 10 texdatas to 7 (308 bytes to 186)
+Writing Z:\Steam\SteamApps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+1 second elapsed
+
+
+
+8 threads
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+reading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.prt
+ 329 portalclusters
+ 810 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 107321
+Average clusters visible: 326
+Building PAS...
+Average clusters audible: 327
+visdatasize:30198  compressed from 31584
+writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+916 faces
+6675114 square feet [961216512.00 square inches]
+16 Displacements
+1186123 Square Feet [170801712.00 Square Inches]
+916 patches before subdivision
+22500 patches after subdivision
+2 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 254938, max 201
+transfer lists:   1.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1687, 1648, 1648)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(485, 474, 474)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(31, 29, 29)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(9, 9, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 1)
+Build Patch/Sample Hash Table(s).....Done<0.0067 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 19/8192          228/98304    ( 0.2%) 
+brushsides             114/65536         912/524288   ( 0.2%) 
+planes                 124/65536        2480/1310720  ( 0.2%) 
+vertexes               868/65536       10416/786432   ( 1.3%) 
+nodes                  735/65536       23520/2097152  ( 1.1%) 
+texinfos                14/12288        1008/884736   ( 0.1%) 
+texdata                  7/2048          224/65536    ( 0.3%) 
+dispinfos               16/0            2816/0        ( 0.0%) 
+disp_verts            4624/0           92480/0        ( 0.0%) 
+disp_tris             8192/0           16384/0        ( 0.0%) 
+disp_lmsamples     1107520/0         1107520/0        ( 0.0%) 
+faces                  916/65536       51296/3670016  ( 1.4%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces               54/65536        3024/3670016  ( 0.1%) 
+leaves                 737/65536       23584/2097152  ( 1.1%) 
+leaffaces              980/65536        1960/131072   ( 1.5%) 
+leafbrushes            592/65536        1184/131072   ( 0.9%) 
+areas                    3/256            24/2048     ( 1.2%) 
+surfedges             4060/512000      16240/2048000  ( 0.8%) 
+edges                 2103/256000       8412/1024000  ( 0.8%) 
+LDR worldlights          2/8192          176/720896   ( 0.0%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            2/32768          24/393216   ( 0.0%) 
+waterstrips             58/32768         580/327680   ( 0.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           792/65536        1584/131072   ( 1.2%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]      388344/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]       30198/16777216 ( 0.2%) 
+entdata               [variable]         868/393216   ( 0.2%) 
+LDR ambient table      737/65536        2948/262144   ( 1.1%) 
+HDR ambient table      737/65536        2948/262144   ( 1.1%) 
+LDR leaf ambient      4926/65536      137928/1835008  ( 7.5%) 
+HDR leaf ambient       737/65536       20636/1835008  ( 1.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]      106645/0        ( 0.0%) 
+physics               [variable]      934885/4194304  (22.3%) 
+physics terrain       [variable]           0/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 2012
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+7 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+916 faces
+6675114 square feet [961216512.00 square inches]
+16 Displacements
+1186123 Square Feet [170801712.00 Square Inches]
+916 patches before subdivision
+22500 patches after subdivision
+2 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 254938, max 201
+transfer lists:   1.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1687, 1648, 1648)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(485, 474, 474)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(31, 29, 29)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(9, 9, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 1)
+Build Patch/Sample Hash Table(s).....Done<0.0074 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 19/8192          228/98304    ( 0.2%) 
+brushsides             114/65536         912/524288   ( 0.2%) 
+planes                 124/65536        2480/1310720  ( 0.2%) 
+vertexes               868/65536       10416/786432   ( 1.3%) 
+nodes                  735/65536       23520/2097152  ( 1.1%) 
+texinfos                14/12288        1008/884736   ( 0.1%) 
+texdata                  7/2048          224/65536    ( 0.3%) 
+dispinfos               16/0            2816/0        ( 0.0%) 
+disp_verts            4624/0           92480/0        ( 0.0%) 
+disp_tris             8192/0           16384/0        ( 0.0%) 
+disp_lmsamples     1107520/0         1107520/0        ( 0.0%) 
+faces                  916/65536       51296/3670016  ( 1.4%) 
+hdr faces              916/65536       51296/3670016  ( 1.4%) 
+origfaces               54/65536        3024/3670016  ( 0.1%) 
+leaves                 737/65536       23584/2097152  ( 1.1%) 
+leaffaces              980/65536        1960/131072   ( 1.5%) 
+leafbrushes            592/65536        1184/131072   ( 0.9%) 
+areas                    3/256            24/2048     ( 1.2%) 
+surfedges             4060/512000      16240/2048000  ( 0.8%) 
+edges                 2103/256000       8412/1024000  ( 0.8%) 
+LDR worldlights          2/8192          176/720896   ( 0.0%) 
+HDR worldlights          2/8192          176/720896   ( 0.0%) 
+leafwaterdata            2/32768          24/393216   ( 0.0%) 
+waterstrips             58/32768         580/327680   ( 0.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           792/65536        1584/131072   ( 1.2%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]      388344/0        ( 0.0%) 
+HDR lightdata         [variable]      388344/0        ( 0.0%) 
+visdata               [variable]       30198/16777216 ( 0.2%) 
+entdata               [variable]         868/393216   ( 0.2%) 
+LDR ambient table      737/65536        2948/262144   ( 1.1%) 
+HDR ambient table      737/65536        2948/262144   ( 1.1%) 
+LDR leaf ambient      4926/65536      137928/1835008  ( 7.5%) 
+HDR leaf ambient      4926/65536      137928/1835008  ( 7.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]      106645/0        ( 0.0%) 
+physics               [variable]      934885/4194304  (22.3%) 
+physics terrain       [variable]           0/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 2012
+Writing z:\steam\steamapps\ief015\garrysmod\garrysmod\gamemodes\laserredux\maps\lr_polarized.bsp
+7 seconds elapsed
